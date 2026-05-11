@@ -54,3 +54,72 @@ h1 {
 .thumbnail:hover {
     transform: scale(1.1);
 }
+
+.popup {
+    align-content: center;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup__img {
+    max-height: 80%;
+    max-width: 80%;
+}
+
+.popup__close {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 128px;
+    position: fixed;
+    right: 64px;
+    top: 64px;
+}
+
+.popup__arrow {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 128px;
+    height: 128px;
+    line-height: 128px;
+    opacity: 50%;
+    position:absolute;
+    top: 50%;
+    width: 128px;
+}
+
+.popup__close,
+.popup__arrow{
+    opacity: 0.5;
+    transition: opacity 0.3s ease;
+}
+
+popup__close:hover,
+popup__arrow:hover {
+    opacity: 100%;
+}
+
+.popup__arrow:hover {
+    opacity: 100%;
+}
+
+.popup__arrow--left {
+    left: 5%;
+}
+
+.popup__arrow--right {
+    right: 5%;
+}
